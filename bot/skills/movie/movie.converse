@@ -1,0 +1,26 @@
+@Intent('movie.discover', [
+    'buy a movie',
+    'discover movies'
+])
+discoverMovies() {
+    movies = fetchDiscoverMovies()
+
+    @Format('carousel', movies)
+    > Here are some movies
+}
+
+@Event('on', 'movie.buy')
+buyMovie() {
+    stripeToken = :event.stripeToken
+    movieId = :event.movieId
+    price = :event.price
+
+    buy(stripeToken, {
+        id: movieId,
+        price: price
+    })
+    
+    > Thank you for buying the film.
+    > Here is the link to the movie
+    // Continue the scenario by sending a movie ...
+}

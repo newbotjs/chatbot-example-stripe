@@ -1,0 +1,6 @@
+node_modules
+dist
+creds.data
+.newbot-cloud*
+.logs
+newbot.config.js

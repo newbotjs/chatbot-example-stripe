@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>Rent Movie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <style>
+    #app {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="card">
+        <img :src="params.backdrop" class="card-img-top" >
+        <div class="card-body">
+          <h1 class="card-title">{{ params.title }}</h1>
+          <div class="form-row">
+            <label for="card-element">
+              Payment
+            </label>
+            <div id="card-element" style="width: 100%;">
+              <!-- A Stripe Element will be inserted here. -->
+            </div>
+            <div class="alert alert-danger" style="width: 100%;" v-if="error">{{ error }}</div>
+          </div>
+        </div>
+        
+      
+        <button class="btn btn-primary" @click="buy">Submit Payment for $4.99</button>
+      </div>
+  </div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://app.newbot.io/sdk/newbot-sdk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
