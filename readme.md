@@ -17,9 +17,11 @@ After click on Buy button
 
 ## Installation
 
-`git clone git@github.com:newbotjs/chatbot-example-stripe.git`
-`cd chatbot-example-stripe`
-`npm install`
+```
+git clone git@github.com:newbotjs/chatbot-example-stripe.git
+cd chatbot-example-stripe
+npm install
+```
 
 ## Configuration
 
@@ -44,9 +46,9 @@ Open  [Bot Framework Emulator](https://newbot.io/en/docs/essential/emulator.html
 
 1. Go to [NewBot Cloud account](https://app.newbot.io)
 2. Create Environment variables
-	a. Go to Build > Data > Add
-	b. Put a name (`Movies` for example) and select `Environment variables`. Click on `validate`
-	c. Click on `Add` button to add data
-	d. Add `MOVIE_DB_KEY` in `Key` and your The Movie Db Private Key in `Value`
-	e. Add new data and add `STRIPE_KEY` in `Key` and your Stripe Private Key in `Value`
+    1. Go to Build > Data > Add
+	2. Put a name (`Movies` for example) and select `Environment variables`. Click on `validate`
+	3. Click on `Add` button to add data
+	4. Add `MOVIE_DB_KEY` in `Key` and your The Movie Db Private Key in `Value`
+	5. Add new data and add `STRIPE_KEY` in `Key` and your Stripe Private Key in `Value`
 3. In your project, deploy with this command : `newbot deploy`
